@@ -1,0 +1,4 @@
+function songDecoder(song : string){
+   let splat = song.replace(/WUB/g, " ").split(" "); //?
+    return splat.filter(v => v).join(" ").trim() //?
+  }
