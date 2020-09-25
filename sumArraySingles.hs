@@ -10,7 +10,8 @@
 import Data.List
 groupedtest = group . sort $ [1,3,2,1,4,2]
 -- repeats :: (Num c, Ord c) => [c] -> c
-repeats nums = foldr (\x acc -> acc + head x ) 0 . filter (\x -> length x == 1) . group . sort $ nums
+repeats :: [Integer] -> Integer
+repeats = sum . concat . filter ((==1) . length) . group . sort
 
 -- results = repeats [3,6,8,2,2,5,5,11,13]
 
