@@ -8,4 +8,5 @@
 
 -- If you like this Kata, please try:
 import Data.List
-uniques = foldr (\x acc -> acc + head x ) 0 [[1,1],[2],[5], [6,6,6]]
+uniques = foldr (\x acc -> if length x == 1 then acc + head x else acc ) 0 [[1,1],[2],[5], [6,6,6]]
+-- uniques = foldr (\x acc -> if length x == 1 then acc + head x else acc ) 0 [[1,1],[2],[5], [6,6,6]]
