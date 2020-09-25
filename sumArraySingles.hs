@@ -8,5 +8,10 @@
 
 -- If you like this Kata, please try:
 import Data.List
-uniques = foldr (\x acc -> if length x == 1 then acc + head x else acc ) 0 [[1,1],[2],[5], [6,6,6]]
--- uniques = foldr (\x acc -> if length x == 1 then acc + head x else acc ) 0 [[1,1],[2],[5], [6,6,6]]
+groupedtest = group . sort $ [1,3,2,1,4,2]
+repeats :: (Num c, Ord c) => [c] -> c
+repeats nums = foldr (\x acc -> if length x == 1 then acc + head x else acc ) 0 . group . sort $ nums
+
+-- results = repeats [3,6,8,2,2,5,5,11,13]
+
+-- repeats([4,5,7,5,4,8]) = 15
