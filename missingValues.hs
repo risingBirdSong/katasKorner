@@ -19,3 +19,11 @@ missingValues = multipyThem . firstAndLast
 
 -- missingVales xs =
 -- oneLiner =    take 2 . sortBy (comparing Down) 
+
+
+testingOtherSolution = f . sortOn length . group . sort $ [1,1,1,2,2,3]
+  where f ([x] : [y , _] : _) = x * x * y;
+
+x = 1 + 2
+-- :sprint x
+-- use the sprint syntax to inquire if a value has been evaluated yet
